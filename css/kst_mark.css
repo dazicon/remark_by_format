@@ -1,0 +1,128 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;}
+body{
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+padding: 0;
+font-family: "微软雅黑";
+font-size: 16px;
+color: #060606;
+}
+
+img{ border:0; vertical-align:middle; max-width: 100%;width: 100%; height: auto;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+ol,ul,li,dl,dt,dd{ list-style:none;}
+textarea{ vertical-align: top;}
+input{border:0; background:none;}
+input:focus{ border: none;outline:none;}
+a{ color:#060606; text-decoration:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */}
+a:link,a:visited{text-decoration:none;}
+
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+
+#app {
+	margin: 0 auto;
+	width: 1080px;
+	height: 100%;
+	background-color: #f0f5f1;
+}
+.form {
+	margin: 10px auto;
+	width: 600px;
+}
+.form_title {
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 28px;
+}
+.input {
+	margin: 8px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	/* border-bottom: 2px solid #716E6E; */
+}
+.input label {
+	margin-right: 20px;
+	width: 20%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: right;
+	/* border-bottom: 2px solid #716E6E; */
+}
+.input input, .input select {
+	width: 55%;
+	height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #716E6E;
+	font-size: 16px;
+}
+.button {
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+}
+.button button {
+	display: block;
+	margin-left: 40px;
+	width: 200px;
+	height: 40px;
+	background-color: #218bc9;
+	border-radius: 5px;
+	border: none;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+.button .reset {
+	
+	background-color: #d47912;
+}
+.input select {
+	padding: 0;
+	width: 340px;
+	height: 40px;
+	background-color: #f0f5f1;
+}
+.mark {
+	width: 100%;
+	height: 100px;
+}
+.mark-title {
+	margin: 1px 0 20px 120px;
+	font-size: 20px;
+}
+.mark-con-button {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+}
+.mark-content {
+	max-width: 600px;
+	/* height: 100px; */
+	text-align: center;
+	font-size: 18px;
+	color: #C0392B;
+}
+.mark-con-button button {
+	margin-left: 30px;
+	width: 90px;
+	height: 28px;
+	line-height: 28px;
+	background-color: #218bc9;
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
