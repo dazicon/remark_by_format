@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="css/kst_mark.css" />
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/vue-clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+		<script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
 	</head>
 	<body>
 		<div id="app">
@@ -149,6 +151,7 @@
 					//    }
 					//    return(false);
 					// },
+					// 获取url上的参数值
 					getQueryVariable(key){
 						var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
 						var result = window.location.search.substr(1).match(reg);
@@ -156,11 +159,21 @@
 					},
 					submit () {
 						if (this.kefu_name == '' || this.kefu_name == null) {
-							alert('客服姓名不能为空！')
+							// alert('客服姓名不能为空！')
+							this.$message.error({
+								message: '客服姓名不能为空！',
+								center: true
+							})
 						} else if (this.workid == '' || this.workid == null) {
-							alert('工号不能为空！')
+							this.$message.error({
+								message: '工号不能为空！',
+								center: true
+							})
 						} else if (this.type == '') {
-							alert('没有选择病种！')
+							this.$message.error({
+								message: '没有选择病种！',
+								center: true
+							})
 						} else {
 							this.isShow = true
 						}
@@ -180,12 +193,24 @@
 						this.others = ''
 						this.isShow = false
 						// location.reload()
+						this.$message({
+							message: '已重置！',
+							type: 'success',
+							center: true
+						})
 					},
 					onCopy: function () {
-						alert('成功复制到剪切板！')
+						this.$message({
+							message: '成功复制到剪切板!',
+							type: 'success',
+							center: true
+						})
 					},
 					onError: function (e) {
-					    alert('复制失败！')
+						this.$message.error({
+							message: '复制失败！',
+							center: true
+						})
 					}
 				}
 			})
